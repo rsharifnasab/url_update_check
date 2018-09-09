@@ -6,7 +6,7 @@ from datetime import datetime
 from bs4 import BeautifulSoup
 from urllib.request import urlopen, Request
 from urllib.error import URLError, HTTPError
-from pushover import init, Client  # push notifications on your phone
+#from pushover import init, Client  # push notifications on your phone
 # set the path of the music if u use the feature
 # make sure to set up pushover on your phone before u use it
 
@@ -69,7 +69,10 @@ def main():
 
     global url
 #    url = input("Paste the URL you want to check for updates: ")
-    url = "http://www.sanjesh.org/group.aspx?gid=1"
+   # url = "http://www.sanjesh.org/group.aspx?gid=1"
+    url = "http://rsharifnasab.blog.ir/"
+    url = input("pls enter url : ")
+   # url =  "http://virgool.io/"
     global push
     push = False
     """
@@ -106,6 +109,7 @@ when the website has been changed? (y/n): ")
 	"""
     global update_timer
     update_timer = 20
+    update_timer = 5
     """   
  while True:
         temp = input("How often do you want to check \
@@ -161,9 +165,9 @@ def mainloop():
 
             if music is True:
                 # example: file:///home/anon/Music/song.mp3
-                p = vlc.MediaPlayer("file://music.mp3")
+                p = vlc.MediaPlayer("music.mp3")
                 p.play()
-                time.sleep(60)
+                time.sleep(600)
                 p.stop()
             break
         time.sleep(update_timer)
