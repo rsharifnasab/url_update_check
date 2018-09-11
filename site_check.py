@@ -109,7 +109,7 @@ when the website has been changed? (y/n): ")
 	"""
     global update_timer
     update_timer = 20
-    update_timer = 5
+    #update_timer = 5
     """   
  while True:
         temp = input("How often do you want to check \
@@ -169,6 +169,7 @@ def mainloop():
                 p.play()
                 time.sleep(600)
                 p.stop()
+                exit()
             break
         time.sleep(update_timer)
 
